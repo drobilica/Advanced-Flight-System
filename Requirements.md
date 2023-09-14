@@ -53,5 +53,3 @@ Develop an interactive prototype user interface for a virtual system to reserve 
    - The prototype is designed for mobile devices of choice, including phones, tablets, or laptops.
 
 ---
-
-These are the detailed requirements for your final exam project based on the provided text. This should serve as a comprehensive guide as you work on your project. If you have any further questions or need assistance with any specific aspect, please let me know!
