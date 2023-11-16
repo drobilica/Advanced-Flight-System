@@ -1,44 +1,42 @@
-To develop your semestral project, an interactive prototype of a virtual assistant for booking flight tickets, it's important to outline a structured approach. Here’s a plan to guide your project:
 
-### 1. Project Understanding and Requirements Analysis
-- **Understand the Scope**: Familiarize yourself with the project requirements, focusing on the need for a high-fidelity interactive prototype without back-end logic implementation.
-- **Define the Requirements**: List out features like flight search, booking, user reviews, interactive conversation agent, etc., and what each feature entails.
+### Adjusted Project Plan with React and TailwindCSS
 
-### 2. Technology Selection
-- **Frontend Development**: Choose AngularJS for UI development, as suggested.
-- **Chatbot Development**: Use Rasa AI for the conversational interface.
-- **Additional Tools**: Decide on any additional tools or technologies required for the prototype.
+#### 1. Project Understanding and Requirements Analysis
+- **Comprehend Project Scope**: Thoroughly understand the project's focus on creating a high-fidelity interactive prototype for a virtual assistant for flight booking.
+- **Detail Requirements**: List key features like search, booking, user reviews, and an interactive chat interface.
 
-### 3. Design Phase
-- **User Interface Design**: Sketch the UI layout for different screens (e.g., search, booking, flight details, user profile).
-- **Chatbot Design**: Outline the conversational flow for the chatbot, including greeting messages, search queries, and booking dialogs.
-- **Interactivity Features**: Plan how users will interact with the app (e.g., touch, swipe).
+#### 2. Technology Selection
+- **Frontend Development with React**: Choose React for building your user interface, offering a component-based approach that's efficient for UI development.
+- **Styling with TailwindCSS**: Utilize TailwindCSS for styling. Its utility-first approach will help in building a clean, responsive design.
+- **Chatbot with Rasa AI**: Implement the conversational interface using Rasa AI.
 
-### 4. Prototype Development
-- **Build the UI**: Use AngularJS to develop the user interface, keeping in mind usability heuristics.
-- **Develop the Chatbot**: Integrate Rasa AI for the conversational aspect, ensuring it aligns with the UI design.
-- **Simulate Data**: Since back-end logic is not required, simulate data for display, updates, and deletion.
+#### 3. Design Phase
+- **UI Design with React Components**: Sketch the UI, planning out how React components will be structured for different pages (e.g., flight search, bookings, user profiles).
+- **Design System with TailwindCSS**: Define a design system using TailwindCSS to ensure consistency across the application.
+- **Conversational Flow for Chatbot**: Plan the dialogues and user interactions for the chatbot.
 
-### 5. Testing and Iteration
-- **Initial Testing**: Test the prototype for usability, interface design, and chatbot responsiveness.
-- **Feedback Incorporation**: Make necessary adjustments based on testing outcomes.
-- **Heuristic Evaluation**: Ensure the design aligns with usability heuristics discussed in the course.
+#### 4. Prototype Development
+- **Build UI with React**: Develop the interface using React, creating reusable components.
+- **Styling with TailwindCSS**: Apply TailwindCSS for styling components, ensuring responsiveness and adherence to design standards.
+- **Chatbot Integration**: Develop the chatbot functionality in alignment with the UI.
 
-### 6. Documentation and Delivery
-- **Prepare Documentation**: Create a PDF document with screenshots and descriptions of each prototype screen.
-- **Video Demonstration (optional)**: Record a screen capture of the prototype in use, if desired.
+#### 5. Testing and Iteration
+- **UI and Chatbot Testing**: Test the user interface and chatbot interactions for usability and functionality.
+- **Incorporate Feedback**: Revise based on test outcomes and heuristic evaluations.
 
-### 7. Submission
-- **Compile Deliverables**: Ensure you have the prototype (web address or HTML version), the PDF documentation, and the video link (if applicable).
-- **Submission to Instructor**: Submit all materials to the subject instructor as per the guidelines.
+#### 6. Documentation and Delivery
+- **Documenting Screens and Features**: Create a detailed PDF with screen captures and descriptions for each part of the prototype.
+- **Video Demonstration (Optional)**: Consider making a video demonstration of the prototype.
 
-### Order of Execution:
+#### 7. Submission
+- **Finalize Deliverables**: Ensure all components of the project, including the prototype, documentation, and optional video, are ready.
+- **Submit to Instructor**: Present your work as per the submission guidelines.
+
+### Execution Order:
 1. **Project Understanding and Requirements Analysis**
 2. **Technology Selection**
 3. **Design Phase**
 4. **Prototype Development**
 5. **Testing and Iteration**
 6. **Documentation and Delivery**
-7. **Submission**
-
-This plan aligns with your project requirements and ensures a systematic approach to developing your prototype. Remember to continuously refer back to the project brief to ensure all requirements are met.
+7. **Submission**1
