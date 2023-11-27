@@ -1,0 +1,63 @@
+
+.idea
+.vscode
+*.swp
+*.swo
+# Dependencies for Gatsby project
+/advanced-flight-system/node_modules/
+
+# Gatsby's cache directory
+/advanced-flight-system/.cache/
+
+# Build output directory
+/advanced-flight-system/public/
+
+# System files created by macOS
+/advanced-flight-system/.DS_Store
+
+# Log files
+/advanced-flight-system/*.log
+/advanced-flight-system/npm-debug.log*
+/advanced-flight-system/yarn-debug.log*
+/advanced-flight-system/yarn-error.log*
+
+# Process ID files
+/advanced-flight-system/*.pid
+/advanced-flight-system/*.pid.lock
+
+# Seed files
+/advanced-flight-system/*.seed
+
+# Environment variable files
+/advanced-flight-system/.env*
+/advanced-flight-system/.env.local
+/advanced-flight-system/.env.development.local
+/advanced-flight-system/.env.test.local
+/advanced-flight-system/.env.production.local
+
+# Editor artifacts
+/advanced-flight-system/.vscode/
+/advanced-flight-system/.idea/
+/advanced-flight-system/*.sublime-workspace
+
+# Windows system files
+/advanced-flight-system/Thumbs.db
+
+# Testing artifacts
+# Uncomment the following lines if you are using a testing framework
+# /advanced-flight-system/coverage/
+# /advanced-flight-system/.nyc_output/
+
+# Gatsby specific files
+/advanced-flight-system/.gatsby-config.js.swp
+
+# Optional: Additional build or compilation artifacts
+# /advanced-flight-system/path/to/other/artifacts/
+
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Optional: Exclude other files and directories specific to your React app workflow
+# e.g., logs, editor settings, etc.

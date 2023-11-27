@@ -1,0 +1,26 @@
+{
+    "flights": [
+        {
+            "id": "FL1000",
+            "airline": "Air France",
+            "departureAirport": "LAX",
+            "arrivalAirport": "CDG",
+            "departureTime": "2023-12-01T08:00:00",
+            "arrivalTime": "2023-12-01T14:00:00",
+            "duration": "6h",
+            "distance": "5661 miles",
+            "class": "Economy",
+            "availableSeats": 20,
+            "price": 500,
+            "userReviews": [
+                {
+                    "username": "user23",
+                    "rating": 5,
+                    "comment": "Great service and comfortable flight."
+                },
+                // Additional reviews...
+            ]
+        },
+        // Additional flight entries...
+    ]
+}
