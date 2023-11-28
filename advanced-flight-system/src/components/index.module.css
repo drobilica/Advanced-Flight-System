@@ -1,54 +1,100 @@
-.list {
-  display: grid;
-  margin: 0;
-  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
-  --w: 280px;
-  --n: 2;
-  gap: var(--size-gap);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(max(var(--w), 100%/ (var(--n) + 1) + 0.1%), 1fr)
-  );
-  margin-bottom: var(--size-gap);
-  margin-top: var(--size-gap);
+/* src/components/index.module.css */
+
+/* Reset link styles */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.listItem {
-  margin: 0;
+/* Navigation bar */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1.5rem;
 }
 
-.listItem::marker {
-  color: #e95800;
+.logo {
+  width: 120px;
 }
 
-.listItem:nth-child(2)::marker {
-  color: #159bf3;
+.navItems {
+  display: flex;
+  gap: 1rem;
 }
 
-.listItem:nth-child(3)::marker {
-  color: #8eb814;
-}
-
-.listItem:nth-child(4)::marker {
-  color: #663399;
-}
-
-.listItemLink {
-  color: var(--color-primary);
+.navItem {
+  padding: 0.75rem 1rem;
   font-weight: bold;
+  color: #333;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom 0.3s;
 }
 
-.listItemDescription {
-  color: var(--color-text);
-  margin-bottom: 0;
-  margin-top: var(--space-1);
+.navItem:hover {
+  border-bottom: 3px solid #0056b3;
 }
 
-.textCenter {
+.navActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.navAction {
+  padding: 0.5rem 1rem;
+  background: #0056b3;
+  color: #fff;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s;
+}
+
+.navAction:hover {
+  background: #004494;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
   text-align: center;
 }
 
-.intro {
-  max-width: none;
-  line-height: var(--line-height-loose);
+.heroBanner {
+  width: 100%;
+  height: 350px;
 }
+
+.searchBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput {
+  padding: 0.75rem;
+  margin: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+
+.searchButton {
+  padding: 0.75rem 1.5rem;
+  margin: 0.25rem;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background: #0056b3;
+}
+
+/* Add additional styles as needed */

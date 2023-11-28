@@ -1,51 +1,42 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+// src/components/layout.js
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import React from "react";
+import * as styles from "./layout.module.css";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
+    <div className={styles.siteContainer}>
+      <header className={styles.header}>
+        <div className={styles.logoContainer}>
+          {/* <StaticImage
+            src="../images/logo.png" // Replace with the path to your logo
+            alt="Advanced Flight Systems Logo"
+            className={styles.logo}
+          /> */}
+        </div>
+        {/* Header content */}
+      </header>
+      
+      <main className={styles.content}>
+        {children}
+      </main>
+      
+      <footer className={styles.footer}>
+        {/* Footer content */}
+        <p>© {new Date().getFullYear()} Dusan Stanic 2019203040 Interakcija Covek Racunar</p>
+      </footer>
+      
+      {/* Chat icon for the virtual assistant */}
+      <button className={styles.chatButton}>
+        <StaticImage
+          src="../images/virtual-assistant.png"
+          alt="Chat with an agent"
+          className={styles.chatIcon}
+        />
+      </button>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

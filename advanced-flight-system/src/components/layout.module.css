@@ -1,0 +1,62 @@
+/* src/components/layout.module.css */
+
+.siteContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the container at least as tall as the viewport */
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Add additional styles for your header here */
+}
+
+.content {
+flex-grow: 1; /* Grow to occupy the space so the footer can stick at the bottom */
+/* Other styles for your main content area */
+}
+.footer {
+    background-color: #f8f8f8;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #666666;
+    /* Keep the footer at the bottom */
+}
+
+.chatButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #0056b3; /* Adjust color to match your branding */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above other items */
+}
+
+.chatIcon {
+width: 50px; /* Adjust size as needed */
+}
+
+.logoContainer {
+    /* Add your styles for the logo container here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Set the maximum width and height for your logo */
+    max-width: 200px;
+    max-height: 100px;
+}
+
+/* .logo {
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+ */
