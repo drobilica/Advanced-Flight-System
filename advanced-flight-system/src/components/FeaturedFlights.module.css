@@ -1,0 +1,24 @@
+/* src/components/FeaturedFlights.module.css */
+
+.featuredFlights {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.flightsContainer {
+display: grid;
+grid-template-columns: repeat(2, 1fr); /* Two columns */
+gap: 10px;
+}
+
+.flightCard {
+border: 1px solid #ddd;
+padding: 15px;
+margin-bottom: 10px;
+}
+
+.flightCard h3 {
+margin-top: 0;
+}
+
+/* ... additional styles ... */

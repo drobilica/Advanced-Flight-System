@@ -5,6 +5,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import FeaturedFlights from "../components/FeaturedFlights"; // Import the FeaturedFlights component
 import * as styles from "../components/index.module.css";
 
 const IndexPage = () => {
@@ -44,6 +45,9 @@ const IndexPage = () => {
           <button className={styles.searchButton}>Search Flights</button>
         </div>
       </div>
+
+      {/* Featured Flights Section */}
+      <FeaturedFlights />
     </Layout>
   );
 };
