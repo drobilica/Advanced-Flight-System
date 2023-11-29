@@ -2,7 +2,7 @@
     "flights": [
         {
             "id": "FL1001",
-            "airline": "Airline 1",
+            "airline": "ANA",
             "departureAirport": "LAX",
             "arrivalAirport": "CDG",
             "departureTime": "2023-12-01T01:00:00",
@@ -22,9 +22,9 @@
         },
         {
             "id": "FL1002",
-            "airline": "Airline 2",
-            "departureAirport": "LAX",
-            "arrivalAirport": "CDG",
+            "airline": "Air France",
+            "departureAirport": "JWA",
+            "arrivalAirport": "ZRH",
             "departureTime": "2023-12-01T02:00:00",
             "arrivalTime": "2023-12-01T12:00:00",
             "duration": "6h",
@@ -42,8 +42,8 @@
         },
         {
             "id": "FL1003",
-            "airline": "Airline 3",
-            "departureAirport": "LAX",
+            "airline": "United Airlines",
+            "departureAirport": "MIA",
             "arrivalAirport": "CDG",
             "departureTime": "2023-12-01T03:00:00",
             "arrivalTime": "2023-12-01T13:00:00",
@@ -51,7 +51,7 @@
             "distance": "5630 miles",
             "class": "Business",
             "availableSeats": 17,
-            "price": 650,
+            "price": 370,
             "userReviews": [
                 {
                     "username": "user3",
@@ -61,10 +61,130 @@
             ]
         },
         {
+            "id": "FL1004",
+            "airline": "Air Serbia",
+            "departureAirport": "JFK",
+            "arrivalAirport": "BEG",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "10h",
+            "distance": "4630 miles",
+            "class": "Business",
+            "availableSeats": 58,
+            "price": 400,
+            "userReviews": [
+                {
+                    "username": "dusan",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
+            "id": "FL1005",
+            "airline": "KLM",
+            "departureAirport": "JFK",
+            "arrivalAirport": "DCA",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 87,
+            "price": 210,
+            "userReviews": [
+                {
+                    "username": "dusan",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
+            "id": "FL1006",
+            "airline": "LHR",
+            "departureAirport": "JFK",
+            "arrivalAirport": "BER",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 7,
+            "price": 210,
+            "userReviews": [
+                {
+                    "username": "dusan",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
+            "id": "FL1007",
+            "airline": "Alitalia",
+            "departureAirport": "FRA",
+            "arrivalAirport": "FCO",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 23,
+            "price": 210,
+            "userReviews": [
+                {
+                    "username": "dusan",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
+            "id": "FL1008",
+            "airline": "Lufthansa",
+            "departureAirport": "MAD",
+            "arrivalAirport": "VIE",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 97,
+            "price": 210,
+            "userReviews": [
+                {
+                    "username": "user1",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
+            "id": "FL1009",
+            "airline": "Air Serbia",
+            "departureAirport": "BEG",
+            "arrivalAirport": "MLA",
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 87,
+            "price": 210,
+            "userReviews": [
+                {
+                    "username": "user2",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
+                }
+            ]
+        },
+        {
             "id": "FL10010",
-            "airline": "Airline 10",
-            "departureAirport": "LAX",
-            "arrivalAirport": "CDG",
+            "airline": "Wizz Air",
+            "departureAirport": "NWR",
+            "arrivalAirport": "AMS",
             "departureTime": "2023-12-01T010:00:00",
             "arrivalTime": "2023-12-01T110:00:00",
             "duration": "6h",

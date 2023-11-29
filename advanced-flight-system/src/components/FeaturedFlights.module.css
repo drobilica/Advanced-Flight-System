@@ -6,9 +6,10 @@
 }
 
 .flightsContainer {
-display: grid;
-grid-template-columns: repeat(2, 1fr); /* Two columns */
-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px;
+    /* Remove any conflicting styles if present */
 }
 
 .flightCard {
@@ -20,5 +21,9 @@ margin-bottom: 10px;
 .flightCard h3 {
 margin-top: 0;
 }
-
-/* ... additional styles ... */
+.arrowButton {
+    border: none;
+    background: none;
+    cursor: pointer;
+    /* Add more styling as needed */
+}
