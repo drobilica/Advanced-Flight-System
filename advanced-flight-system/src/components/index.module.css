@@ -7,25 +7,25 @@ a {
 }
 
 /* Navigation bar */
-.navigation {
+/* .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 0 1.5rem;
-}
+} */
 
 .logo {
   width: 120px;
 }
 
-.navItems {
+/* .navItems {
   display: flex;
   gap: 1rem;
-}
+} */
 
-.navItem {
+/* .navItem {
   padding: 0.75rem 1rem;
   font-weight: bold;
   color: #333;
@@ -52,7 +52,7 @@ a {
 
 .navAction:hover {
   background: #004494;
-}
+} */
 
 /* Hero section */
 .hero {

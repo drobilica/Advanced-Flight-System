@@ -3,60 +3,97 @@
 .siteContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Make the container at least as tall as the viewport */
+    min-height: 100vh; /* Full viewport height */
 }
 
 .header {
     background-color: #ffffff;
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Add additional styles for your header here */
 }
 
 .content {
-flex-grow: 1; /* Grow to occupy the space so the footer can stick at the bottom */
-/* Other styles for your main content area */
+    flex-grow: 1; /* Expand to fill space */
 }
+
 .footer {
     background-color: #f8f8f8;
     padding: 1rem 0;
     text-align: center;
     font-size: 0.875rem;
     color: #666666;
-    /* Keep the footer at the bottom */
 }
 
 .chatButton {
     position: fixed;
     right: 20px;
     bottom: 20px;
-    background-color: #0056b3; /* Adjust color to match your branding */
+    background-color: #0056b3;
     border: none;
     border-radius: 50%;
     padding: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    z-index: 1000; /* Ensure it's above other items */
+    z-index: 1000;
 }
 
 .chatIcon {
-width: 50px; /* Adjust size as needed */
+    width: 50px;
 }
 
 .logoContainer {
-    /* Add your styles for the logo container here */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Set the maximum width and height for your logo */
     max-width: 200px;
     max-height: 100px;
 }
 
-/* .logo {
-
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0 1.5rem;
 }
- */
+
+.logo {
+    width: 120px;
+}
+
+.navItems {
+    display: flex;
+    gap: 1rem;
+}
+
+.navItem {
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.navItem:hover {
+    border-bottom: 3px solid #0056b3;
+}
+
+.navActions {
+    display: flex;
+    gap: 1rem;
+}
+
+.navAction {
+    padding: 0.5rem 1rem;
+    background: #0056b3;
+    color: #fff;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s;
+}
+
+.navAction:hover {
+    background: #004494;
+}
+
+/* Remove styles from index.module.css that are duplicated here */

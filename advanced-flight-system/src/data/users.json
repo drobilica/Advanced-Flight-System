@@ -16,7 +16,9 @@
             "email": "user2@example.com",
             "name": "User 2",
             "phone": "+1234567802",
-            "favoriteAirline": "United Airlines"
+            "favoriteAirline": "United Airlines",
+            "wishlist": ["FL1007", "FL1005"]
+
         },
         {
             "id": 4,
@@ -25,7 +27,8 @@
             "email": "dusan@advancedflight.com",
             "name": "Dusan Stanic",
             "phone": "+1234567802",
-            "favoriteAirline": "Air Serbia"
+            "favoriteAirline": "Air Serbia",
+            "wishlist": ["FL1001", "FL1002", "FL1008", "FL1009", "FL1007"]
         },
         {
             "id": 3,
