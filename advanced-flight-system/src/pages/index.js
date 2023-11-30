@@ -3,11 +3,10 @@ import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import FeaturedFlights from "../components/FeaturedFlights";
+import SearchBox from "../components/SearchBox";
+import SearchResults from "../components/SearchResults";
 import flightsData from "../data/featuredFlights.json";
 import * as styles from "../components/index.module.css";
-import { Button } from '@mui/material';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useUser } from '../contexts/UserContext';
 
 const IndexPage = () => {
@@ -18,14 +17,8 @@ const IndexPage = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    // Update the 'To' options based on the selected 'From' airport
     if (fromInput) {
-      setFilteredToOptions(
-        [...new Set(flightsData.flights
-          .filter(flight => flight.departureAirport === fromInput)
-          .map(flight => flight.arrivalAirport))]
-          .sort()
-      );
+      setFilteredToOptions([...new Set(flightsData.flights.filter(flight => flight.departureAirport === fromInput).map(flight => flight.arrivalAirport))].sort());
     } else {
       setFilteredToOptions([]);
     }
@@ -62,40 +55,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Advanced Flight System" />
-      {/* Hero Section */}
       <div className={styles.hero}>
         <StaticImage src="../images/airline-banner.jpg" alt="Hero Banner" className={styles.heroBanner} />
-        <div className={styles.searchBox}>
-          <input type="text" placeholder="From" aria-label="Departure Airport" value={fromInput} onChange={e => setFromInput(e.target.value)} className={styles.searchInput} list="from-options" />
-          <datalist id="from-options">
-            {[...new Set(flightsData.flights.map(flight => flight.departureAirport))].sort().map((airport, index) => <option key={index} value={airport} />)}
-          </datalist>
-          <input type="text" placeholder="To" aria-label="Arrival Airport" value={toInput} onChange={e => setToInput(e.target.value)} className={styles.searchInput} list="to-options" disabled={!fromInput} />
-          <datalist id="to-options">
-            {filteredToOptions.map((airport, index) => <option key={index} value={airport} />)}
-          </datalist>
-          <button onClick={handleSearch} className={styles.searchButton}>Search Flights</button>
-        </div>
+        <SearchBox {...{ fromInput, setFromInput, toInput, setToInput, handleSearch, filteredToOptions }} />
       </div>
-      {/* Search Results Section */}
-      {searchResults.length > 0 && (
-        <div className={styles.resultsContainer}>
-          <h2>Search Results</h2>
-          {searchResults.map((flight, index) => (
-            <div key={index} className={styles.resultCard}>
-              <div>
-                <p>{flight.airline} from {flight.departureAirport} to {flight.arrivalAirport} - {flight.departureTime}</p>
-                <p>Price: ${flight.price}</p>
-              </div>
-              <div>
-                <Button variant="outlined" onClick={() => handleReserve(flight.id)}>Reserve</Button>
-                <Button variant="outlined" startIcon={isFlightInWishlist(flight.id) ? <FavoriteIcon /> : <FavoriteBorderIcon />} onClick={() => handleWishlist(flight.id)}>Wishlist</Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-      {/* Featured Flights Section */}
+      <SearchResults {...{ searchResults, handleReserve, handleWishlist, isFlightInWishlist }} />
       <FeaturedFlights />
     </Layout>
   );

@@ -1,0 +1,3 @@
+{
+    "departureTime": "{time, time, short} {date, long}"
+}

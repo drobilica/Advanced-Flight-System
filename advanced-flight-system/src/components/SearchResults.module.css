@@ -1,0 +1,14 @@
+/* Add additional styles as needed */
+.resultsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultCard {
+border: 1px solid #ddd;
+padding: 10px;
+margin-bottom: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
