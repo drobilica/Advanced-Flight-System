@@ -181,12 +181,12 @@
             ]
         },
         {
-            "id": "FL10010",
+            "id": "FL1010",
             "airline": "Wizz Air",
             "departureAirport": "NWR",
             "arrivalAirport": "AMS",
             "departureTime": "2023-12-01T010:00:00",
-            "arrivalTime": "2023-12-01T110:00:00",
+            "arrivalTime": "2023-12-02T110:00:00",
             "duration": "6h",
             "distance": "5700 miles",
             "class": "Economy",
@@ -194,7 +194,7 @@
             "price": 1000,
             "userReviews": [
                 {
-                    "username": "user10",
+                    "username": "user1",
                     "rating": 1,
                     "comment": "Great service and comfortable flight 10."
                 }

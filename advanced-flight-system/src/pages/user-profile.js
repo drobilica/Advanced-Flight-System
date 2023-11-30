@@ -49,20 +49,20 @@ const UserProfilePage = () => {
             <h1>User Profile</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                <label>Name:</label>
-                <input type="text" name="name" value={userInfo.name} onChange={handleInputChange} />
+                    <label htmlFor="name">Name:</label>
+                    <input id="name" type="text" name="name" value={userInfo.name} onChange={handleInputChange} />
                 </div>
                 <div>
-                <label>Email:</label>
-                <input type="email" name="email" value={userInfo.email} onChange={handleInputChange} />
+                    <label htmlFor="email">Email:</label>
+                    <input id="email" type="email" name="email" value={userInfo.email} onChange={handleInputChange} />
                 </div>
                 <div>
-                <label>Phone:</label>
-                <input type="tel" name="phone" value={userInfo.phone} onChange={handleInputChange} />
+                    <label htmlFor="phone">Phone:</label>
+                    <input id="phone" type="tel" name="phone" value={userInfo.phone} onChange={handleInputChange} />
                 </div>
                 <div>
-                <label>Favorite Airline:</label>
-                <input type="text" name="favoriteAirline" value={userInfo.favoriteAirline} onChange={handleInputChange} />
+                    <label  htmlFor="favoriteAirline">Favorite Airline:</label>
+                    <input  id="favoriteAirline" type="text" name="favoriteAirline" value={userInfo.favoriteAirline} onChange={handleInputChange} />
                 </div>
                 <button type="submit">Save Changes</button>
             </form>

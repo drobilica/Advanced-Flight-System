@@ -97,3 +97,8 @@
 }
 
 /* Remove styles from index.module.css that are duplicated here */
+.logoLink {
+    /* Add your specific styles for the logo link here */
+    display: inline-block; /* Example style */
+    /* ... other styles ... */
+}

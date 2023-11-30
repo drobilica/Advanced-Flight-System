@@ -16,4 +16,17 @@ export const UserProvider = ({ children }) => {
     );
 };
 
-export const useUser = () => useContext(UserContext);
+export const useUser = () => {
+    const context = useContext(UserContext);
+    if (!context) {
+        throw new Error('useUser must be used within a UserProvider');
+    }
+    const { user, setUser } = context;
+
+    useEffect(() => {
+        // Update local storage whenever the user state changes
+        localStorage.setItem('user', JSON.stringify(user));
+    }, [user]);
+
+    return { user, setUser };
+};
