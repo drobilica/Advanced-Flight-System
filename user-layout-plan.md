@@ -60,7 +60,7 @@ Landing Page Layout
     Header:
         Logo: Place your application logo in a prominent position, typically in the top left.
         Navigation Bar: Include links to essential pages like "Flight Search", "My Reservations", "Flight Journal", and "User Profile". Ensure these are clearly labeled and easy to find.
-        Login/Signup Buttons: Top right corner, for easy access to user authentication.
+        Login Button: Top right corner, for easy access to user authentication.
 
     Main Section:
         Welcome Message: A brief, engaging welcome text that introduces users to your application.
