@@ -185,18 +185,18 @@
             "airline": "Wizz Air",
             "departureAirport": "NWR",
             "arrivalAirport": "AMS",
-            "departureTime": "2023-12-01T010:00:00",
-            "arrivalTime": "2023-12-02T110:00:00",
-            "duration": "6h",
-            "distance": "5700 miles",
-            "class": "Economy",
-            "availableSeats": 10,
-            "price": 1000,
+            "departureTime": "2023-12-01T03:00:00",
+            "arrivalTime": "2023-12-01T13:00:00",
+            "duration": "5h",
+            "distance": "400 miles",
+            "class": "Business",
+            "availableSeats": 87,
+            "price": 210,
             "userReviews": [
                 {
-                    "username": "user1",
-                    "rating": 1,
-                    "comment": "Great service and comfortable flight 10."
+                    "username": "user2",
+                    "rating": 4,
+                    "comment": "Great service and comfortable flight 3."
                 }
             ]
         }

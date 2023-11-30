@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import * as styles from "./FeaturedFlights.module.css";
 import featuredFlightsData from "../data/featuredFlights.json";
+import moment from 'moment'; // Import Moment.js
 
 const FeaturedFlights = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,7 +43,7 @@ const FeaturedFlights = () => {
           return (
             <div key={flight.id} className={styles.flightCard}>
               <h3>{flight.airline} - {flight.departureAirport} to {flight.arrivalAirport}</h3>
-              <p>Departure: {flight.departureTime} | Arrival: {flight.arrivalTime}</p>
+              <p>Departure: {moment(flight.departureTime).format('HH:mm, DD MMMM YYYY')}</p><p> Arrival: {moment(flight.arrivalTime).format('HH:mm, DD MMMM YYYY')}</p>
               <p>Duration: {flight.duration} | Distance: {flight.distance}</p>
               <p>Class: {flight.class} | Price: ${flight.price}</p>
               <p>Seats Available: {flight.availableSeats}</p>

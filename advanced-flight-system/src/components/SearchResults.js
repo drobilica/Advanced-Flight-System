@@ -1,10 +1,13 @@
 // src/components/SearchResults.js
 import React from 'react';
-import { FormattedDate, FormattedTime, FormattedMessage } from 'react-intl';
+import moment from 'moment'; // Import Moment.js
+// import { FormattedDate, FormattedTime } from 'react-intl';
 import * as styles from './SearchResults.module.css';
 import { Button } from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+
+
 
 const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightInWishlist }) => {
     return (
@@ -17,9 +20,10 @@ const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightI
                             <div>
                                 <p>
                                     {flight.airline} from {flight.departureAirport} to {flight.arrivalAirport} -{' '}
-                                    <FormattedDate value={new Date(flight.departureTime)} day="numeric" month="long" year="numeric" />,{' '}
-                                    <FormattedTime value={new Date(flight.departureTime)} />,{' '}
-                                    <FormattedMessage id="departureTime" values={{ time: new Date(flight.departureTime) }} />
+                                    {/* <FormattedTime value={new Date(flight.departureTime)} hour12={false}/>,{' '} */}
+                                    <span>{moment(flight.departureTime).format('HH:mm, DD MMMM YYYY')}</span>
+
+                                    {/* <FormattedDate value={new Date(flight.departureTime)} day="numeric" month="long" year="numeric" />,{' '} */}
                                 </p>
                                 <p>Price: ${flight.price}</p>
                             </div>

@@ -5,10 +5,12 @@ import * as styles from './SearchBox.module.css'; // Create and import CSS modul
 const SearchBox = ({ fromInput, setFromInput, toInput, setToInput, handleSearch, filteredToOptions }) => {
     return (
         <div className={styles.searchBox}>
+        <label htmlFor="from-airport">From:</label>
         <input
             type="text"
             placeholder="From"
             aria-label="Departure Airport"
+            // id="from-airport"
             value={fromInput}
             onChange={e => setFromInput(e.target.value)}
             className={styles.searchInput}
@@ -19,10 +21,12 @@ const SearchBox = ({ fromInput, setFromInput, toInput, setToInput, handleSearch,
             <option key={index} value={airport} />
             ))}
         </datalist>
+        <label htmlFor="to-airport">To:</label>        
         <input
             type="text"
             placeholder="To"
             aria-label="Arrival Airport"
+            // id="to-airport"
             value={toInput}
             onChange={e => setToInput(e.target.value)}
             className={styles.searchInput}
