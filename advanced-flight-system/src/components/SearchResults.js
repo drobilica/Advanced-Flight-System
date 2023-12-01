@@ -6,7 +6,26 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import * as styles from './SearchResults.module.css';
 
-const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightInWishlist }) => {
+const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightInWishlist, pageType }) => {
+    const renderButtons = (flightId) => {
+        switch (pageType) {
+            case 'reservation':
+                return (
+                    <Button color="error" variant="outlined" onClick={() => handleReserve(flightId)}>
+                        Cancel Reservation
+                    </Button>
+                );
+            case 'search':
+            default:
+                return (
+                    <>
+                        <Button variant="outlined" onClick={() => handleReserve(flightId)}>Reserve</Button>
+                        <Button variant="outlined" startIcon={isFlightInWishlist(flightId) ? <FavoriteIcon /> : <FavoriteBorderIcon />} onClick={() => handleWishlist(flightId)}>Wishlist</Button>
+                    </>
+                );
+        }
+    };
+
     return (
         <TableContainer component={Paper} className={styles.resultsContainer}>
             <Table>
@@ -31,8 +50,7 @@ const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightI
                             <TableCell>${flight.price}</TableCell>
                             <TableCell>{flight.class}</TableCell>
                             <TableCell>
-                                <Button variant="outlined" onClick={() => handleReserve(flight.id)}>Reserve</Button>
-                                <Button variant="outlined" startIcon={isFlightInWishlist(flight.id) ? <FavoriteIcon /> : <FavoriteBorderIcon />} onClick={() => handleWishlist(flight.id)}>Wishlist</Button>
+                                {renderButtons(flight.id)}
                             </TableCell>
                         </TableRow>
                     ))}

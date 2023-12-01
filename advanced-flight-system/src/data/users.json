@@ -7,18 +7,20 @@
             "email": "user1@example.com",
             "name": "User 1",
             "phone": "+1234567801",
-            "favoriteAirline": "Wizz Air"
+            "favoriteAirline": "Wizz Air",
+            "wishlist": ["FL1007", "FL1009"],
+            "reservations": ["FL1003"]
         },
         {
             "id": 2,
-            "username": "user2",
+            "username": "Mika",
             "password": "password3868",
             "email": "user2@example.com",
             "name": "User 2",
             "phone": "+1234567802",
             "favoriteAirline": "United Airlines",
-            "wishlist": ["FL1007", "FL1005"]
-
+            "wishlist": ["FL1007", "FL1005"],
+            "reservations": ["FL1003"]
         },
         {
             "id": 4,
@@ -28,16 +30,20 @@
             "name": "Dusan Stanic",
             "phone": "+1234567802",
             "favoriteAirline": "Air Serbia",
-            "wishlist": ["FL1001", "FL1002", "FL1008", "FL1009", "FL1007"]
+            "wishlist": ["FL1001", "FL1002", "FL1009", "FL1007"],
+            "reservations": ["FL1003", "FL1008", "FL1007"]
+
         },
         {
             "id": 3,
-            "username": "user3",
+            "username": "Pera",
             "password": "password7958",
             "email": "user3@example.com",
             "name": "User 3",
             "phone": "+1234567803",
-            "favoriteAirline": "Air France"
+            "favoriteAirline": "Air France",
+            "wishlist": ["FL1003", "FL1005"],
+            "reservations": ["FL1003"]
         }
     ]
 }
