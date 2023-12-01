@@ -29,36 +29,38 @@ const SearchResults = ({ searchResults, handleReserve, handleWishlist, isFlightI
 
     return (
         <TableContainer component={Paper} className={styles.resultsContainer}>
-        <Table>
+            <Table>
             <TableHead>
-            <TableRow>
-                <TableCell>Airline</TableCell>
-                <TableCell>Departure - Arrival</TableCell>
-                <TableCell>Time</TableCell>
-                <TableCell>Seats Avail.</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>Class</TableCell>
-                <TableCell>Actions</TableCell>
-            </TableRow>
-            </TableHead>
-            <TableBody>
-            {searchResults.map((flight, index) => (
-                <TableRow key={index}>
-                <ButtonBase component={Link} to={`/details/${flight.id}`} style={{ display: 'contents' }}>
-                    <TableCell>{flight.airline}</TableCell>
-                    <TableCell>{flight.departureAirport} - {flight.arrivalAirport}</TableCell>
-                    <TableCell>{moment(flight.departureTime).format('HH:mm, DD MMM YYYY')}</TableCell>
-                    <TableCell>{flight.availableSeats}</TableCell>
-                    <TableCell>${flight.price}</TableCell>
-                    <TableCell>{flight.class}</TableCell>
-                </ButtonBase>
-                <TableCell>
-                    {renderButtons(flight.id)}
-                </TableCell>
-                </TableRow>
-            ))}
-            </TableBody>
-        </Table>
+                    <TableRow>
+                    <TableCell>Airline</TableCell>
+                    <TableCell>Departure - Arrival</TableCell>
+                    <TableCell>Time</TableCell>
+                    <TableCell>Seats Avail.</TableCell>
+                    <TableCell>Price</TableCell>
+                    <TableCell>Class</TableCell>
+                    <TableCell>Actions</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    {searchResults.map((flight, index) => (
+                        <TableRow key={index}>
+                            <TableCell>
+                                <ButtonBase component={Link} to={`/details/${flight.id}`}>
+                                    {flight.airline}
+                                </ButtonBase>
+                            </TableCell>
+                            <TableCell>{flight.departureAirport} - {flight.arrivalAirport}</TableCell>
+                            <TableCell>{moment(flight.departureTime).format('HH:mm, DD MMM YYYY')}</TableCell>
+                            <TableCell>{flight.availableSeats}</TableCell>
+                            <TableCell>${flight.price}</TableCell>
+                            <TableCell>{flight.class}</TableCell>
+                            <TableCell>
+                                {renderButtons(flight.id)}
+                            </TableCell>
+                        </TableRow>
+                    ))}
+                </TableBody>
+            </Table>
         </TableContainer>
     );
 };
