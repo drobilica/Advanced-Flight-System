@@ -8,6 +8,7 @@ import SearchResults from "../components/SearchResults";
 import flightsData from "../data/featuredFlights.json";
 import * as styles from "../components/index.module.css";
 import { useUser } from '../contexts/UserContext';
+import { handleWishlistToggle, isFlightInWishlist } from '../utils/wishlistUtils';
 
 const IndexPage = () => {
   const { user, setUser } = useUser();
@@ -23,11 +24,7 @@ const IndexPage = () => {
       setFilteredToOptions([]);
     }
   }, [fromInput]);
-
-  const handleReserve = flightId => {
-    console.log("Reserved flight:", flightId);
-  };
-
+  
   const handleSearch = () => {
     const results = flightsData.flights.filter(flight => {
       const departureTime = new Date(flight.departureTime);
@@ -38,19 +35,15 @@ const IndexPage = () => {
     setSearchResults(results);
   };
 
-  const handleWishlist = flightId => {
-    let updatedWishlist = [...(user?.wishlist || [])];
-    if (updatedWishlist.includes(flightId)) {
-      updatedWishlist = updatedWishlist.filter(id => id !== flightId);
-    } else {
-      updatedWishlist.push(flightId);
-    }
-    const updatedUser = { ...user, wishlist: updatedWishlist };
-    setUser(updatedUser);
-    localStorage.setItem('user', JSON.stringify(updatedUser));
+  const handleReserve = flightId => {
+    console.log("Reserved flight:", flightId);
   };
 
-  const isFlightInWishlist = flightId => user?.wishlist?.includes(flightId);
+  const handleWishlist = flightId => {
+    handleWishlistToggle(user, setUser, flightId);
+  };
+
+  // const isFlightInWishlist = flightId => user?.wishlist?.includes(flightId);
 
   return (
     <Layout>
@@ -59,7 +52,13 @@ const IndexPage = () => {
         <StaticImage src="../images/airline-banner.jpg" alt="Hero Banner" className={styles.heroBanner} />
         <SearchBox {...{ fromInput, setFromInput, toInput, setToInput, handleSearch, filteredToOptions }} />
       </div>
-      <SearchResults {...{ searchResults, handleReserve, handleWishlist, isFlightInWishlist }} />
+      <SearchResults 
+                searchResults={searchResults} 
+                handleReserve={handleReserve} 
+                handleWishlist={handleWishlist} 
+                isFlightInWishlist={(flightId) => isFlightInWishlist(user, flightId)}
+            />
+      {/* <SearchResults {...{ searchResults, handleReserve, handleWishlist, isFlightInWishlist }} /> */}
       <FeaturedFlights />
     </Layout>
   );
