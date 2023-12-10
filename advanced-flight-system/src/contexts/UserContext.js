@@ -3,10 +3,23 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-    const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || null);
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
-        localStorage.setItem('user', JSON.stringify(user));
+        // Check if window is defined (i.e., running in the browser)
+        if (typeof window !== "undefined") {
+            const storedUser = localStorage.getItem('user');
+            if (storedUser) {
+                setUser(JSON.parse(storedUser));
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        // Update local storage whenever the user state changes
+        if (typeof window !== "undefined") {
+            localStorage.setItem('user', JSON.stringify(user));
+        }
     }, [user]);
 
     return (
@@ -22,11 +35,6 @@ export const useUser = () => {
         throw new Error('useUser must be used within a UserProvider');
     }
     const { user, setUser } = context;
-
-    useEffect(() => {
-        // Update local storage whenever the user state changes
-        localStorage.setItem('user', JSON.stringify(user));
-    }, [user]);
 
     return { user, setUser };
 };
